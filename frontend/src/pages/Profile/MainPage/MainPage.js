@@ -21,7 +21,7 @@ const MainPage = ({ user }) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userPost?email=${user?.email}`)
+        fetch(`https://twitter-new-backend-7ca5uqs5g-likhiths-projects.vercel.app/userPost?email=${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setPosts(data)
@@ -45,7 +45,7 @@ const MainPage = ({ user }) => {
                     }
                     setIsLoading(false);
                     if (url) {
-                        axios.patch(`http://localhost:5000/userUpdates/${user?.email}`, userCoverImage)
+                        axios.patch(`https://twitter-new-backend-7ca5uqs5g-likhiths-projects.vercel.app/userUpdates/${user?.email}`, userCoverImage)
                     }
                 })
     }
@@ -65,7 +65,7 @@ const MainPage = ({ user }) => {
                     }
                     setIsLoading(false);
                     if (url) {
-                        axios.patch(`http://localhost:5000/userUpdates/${user?.email}`, userProfileImage)
+                        axios.patch(`https://twitter-new-backend-7ca5uqs5g-likhiths-projects.vercel.app/userUpdates/${user?.email}`, userProfileImage)
                     }
                 })
     }
