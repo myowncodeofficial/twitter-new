@@ -44,7 +44,7 @@ const TweetBox = () => {
     const handleTweet = (e) => {
         e.preventDefault();
         if(user.providerData[0].providerId ==='password'){
-            fetch(`https://twitter-new-weld.vercel.app/loggedInUser?email=${email}`)
+            fetch(`https://twitter-new-backend-8fef0ddjr-likhiths-projects.vercel.app/loggedInUser?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 setName(data[0]?.name)
@@ -67,7 +67,7 @@ const TweetBox = () => {
         // console.log(userPost);
         setPost(' ');
         setImageURL(' ');
-        fetch(`https://twitter-new-weld.vercel.app/post`, {
+        fetch(`https://twitter-new-backend-8fef0ddjr-likhiths-projects.vercel.app/post`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const Feed = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://twitter-new-weld.vercel.app/post')
+        fetch('https://twitter-new-backend-8fef0ddjr-likhiths-projects.vercel.app/post')
         .then(res => res.json())
         .then(data => {
             setPosts(data)
