@@ -48,7 +48,7 @@ const Signup = () => {
             email:email,
         }
 
-        axios.post(`https://twitter-new-weld.vercel.app/register`, user)
+        axios.post(`http://localhost:5000/register`, user)
     }  
 
     const handleGoogleSignIn = () => {
